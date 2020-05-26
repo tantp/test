@@ -1,0 +1,25 @@
+在github上创建项目   https://github.com
+使用git clone https://github.com/xxxxxxx/xxxxx.git克隆到本地
+编辑项目
+git init
+git add . （将改动添加到暂存区）   如 git add test.txt；  git status：检测当前目录和暂存区的状态
+git config  在提交之前必须先设置邮箱和用户名 
+$ git config --global user.name "YourName"
+$ git config --global user.email "YourEmail@xxx.com"
+git commit -m "提交说明"
+git remote add origin https://github.com/xxxxxxx/xxxxx.git  添加远程仓库
+git push origin master 将本地更改推送到远程master分支 提交到远程仓库
+git branch branchName(在本地创建一个命名为branchName的分支)   
+git branch 查看当前自己所在的分支
+git branch -a 查看服务器的所有分支以及自己当前所在的分支
+git push origin branchName(把命名为branchName的本地分支推送到服务器)
+git checkout --track origin/branchName (切换为远程服务器上的命名为branchName的远程分支)
+如果你的搭档要把他本地的分支给关联到服务器上命名为branchName的远程分支，请执行以下操作，git branch --set-upstream localBranchName origin/branchName  （为本地分支添加一个对应的远程分支 与之相对应）->这行命令用来关联本地的分支与服务器上的分支
+完成以上操作之后，就可以进行提交代码了，但是在提交代码之前，你要确定你当前所在的分支
+git push origin branchName（提交代码到远程服务器上命名为branchName的分支上）
+git pull origin branchName （从远程分支上拉取代码）
+切换到分支：git checkout dev   切换到dev分支上
+添加文件到分支上，同在主干道一样；设置配置；提交；添加远程仓库
+git push origin dev  将dev分支提交到远程仓库
+git push origin  a:b   冒号钱是本地分支名，冒号后是远程分支名（远程分支a拉下来后远程分支更换了一个名称）
+git branch -m oldBranchName newBranchName  修改本地git分支的名称
